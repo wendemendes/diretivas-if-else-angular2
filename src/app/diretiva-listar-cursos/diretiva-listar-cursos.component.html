@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+
+  <div class="panel-heading">Cursos</div>
+       <div class="panel-body">
+         
+         <div *ngIf="cursos.length > 0">
+           <table class="table">
+             <th>Nome</th>
+             <tbody>
+               <tr *ngFor="let curso of cursos">
+                 <td>{{curso.codigo}}</td>
+                 <td>{{curso.nome}}</td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+
+
+         <div class="bg-warning" *ngIf="cursos.length == 0">
+           Nenhum resultado encontrado
+         </div>
+       </div>
+   </div>
